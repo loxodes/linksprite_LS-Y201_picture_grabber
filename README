@@ -1,0 +1,9 @@
+A short python script to test the LS-Y201 USART camera (available at sparkfun and cutedigi). It may work on other VC0706 based cameras.
+
+I've written it to test my camera under linux, as Linksprite only provides a windows application.
+
+In the process of writing this, I've uncovered some lies in the datasheet:
+	The return value from a reset command is [0x76, 0x00, 0x26, 0x00, 0x00], not [0x76, 0x00, 0x26, 0x00].
+	The return value from a read JPEG file command does *not* include the interval time. 
+	
+
